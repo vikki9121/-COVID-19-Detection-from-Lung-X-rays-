@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+
+    <style>
+
+
+
+  .body2 {
+
+
+    background-color:rgba(55, 139, 179, 0.884);
+    background-image: url("../static/c2.jpg");
+
+    background-repeat:no-repeat;
+    background-size: 1000%;
+    display: flex;
+
+
+
+  }
+
+  .form {
+
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    /* transform: translate(50%, 50%); */
+    color: #eee;
+    top: 28%;
+    left: 36%;
+    position: absolute;
+
+    height: 500px;
+    padding: 20px;
+    width: 500px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  .cut-short {
+    width: 50px;
+  }
+  .placeholder {
+    color:white;
+    font-family: sans-serif;
+    left: 20px;
+    bottom: 20px;
+    line-height: 25px;
+    pointer-events: none;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  .placeholder1 {
+    color: white;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 25px;
+    top: 20px;
+    bottom: 20px;
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  .submit {
+    /* background-color: #08d; */
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .submit:active {
+    background-color: #06b;
+  }
+    </style>
+</head>
+
+<body class="body2">
+
+  <div class="form">
+      <h2 style="color:goldenrod; font-size:35px;"> Covid-19 Test Report</h2>
+      <h3>Patient Name: <a style="color:crimson">{{name}}</a></h3>
+<!--      <h3>Patient's X-ray image: </h3>-->
+<!--      <div>-->
+<!--          <img src="{{img}}" alt="X-ray Image" width="210" height="210"></img>-->
+<!--      </div><br>-->
+    <h3>Covid-19 Test Result: <a style="color:darkred;">{{prediction}}</a></h3>
+  </div>
+</body>
+</html>

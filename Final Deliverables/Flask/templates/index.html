@@ -1,0 +1,216 @@
+<html>
+<head>
+<title>Covid-19</title>
+  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+</head>
+<body class="body1">
+    
+    <style>
+        .bg-text {
+    background-color: rgba(0,0,0, 0.4);
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    position: absolute;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+  }
+  .bg-text1{ 
+    background-image: url("../static/cv1.jpg");
+      background-image: url("../static/cv1.jpg");
+    color:darkblue;
+    font-weight: bold;
+    /*border: 3px solid #343ba7;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*height: 100%;*/
+    top: 5%;
+    left: 27%;
+    bottom: 5%;
+    z-index: 2;
+    position: absolute;
+    width: 40%;
+    padding: 20px;
+    text-align: right;
+  }
+  h1{
+    font-size:50px;
+  }
+  .body2 {
+
+
+    background-color:rgba(55, 139, 179, 0.884);
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+  }
+  .body1 {
+    background-image: url("../static/cv1.jpg");
+    height: 50%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+  }
+  .form {
+    background-color: #15172b;
+    border-radius: 20px;
+    box-sizing: border-box;
+    /*transform: translate(50%, 50%);*/
+    top: 35%;
+    left: 40%;
+    position: absolute;
+    height: 320px;
+    padding: 20px;
+    width: 320px;
+  }
+  
+  .title {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: #eee;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  .ic3 {
+    margin-top: 30px;
+    border: 10px;
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 16px;
+  }
+  
+  .input {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    padding: 10px 20px 0;
+    width: 100%;
+  }
+  
+  /*.cut {*/
+  /*  background-color: #15172b;*/
+  /*  border-radius: 10px;*/
+  /*  height: 20px;*/
+  /*  left: 20px;*/
+  /*  position: absolute;*/
+  /*  top: -20px;*/
+  /*  transform: translateY(0);*/
+  /*  transition: transform 200ms;*/
+  /*  width: 76px;*/
+  /*}*/  
+  
+  .cut-short {
+    width: 50px;
+  }
+  .placeholder {
+    color:white;
+    font-family: sans-serif;
+    left: 20px;
+    bottom: 20px;
+    line-height: 25px;
+    pointer-events: none;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+  .placeholder1 {
+    color: white;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 25px;
+    top: 20px;
+    bottom: 20px;
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  .submit {
+    background-color: #08d;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .submit:active {
+    background-color: #06b;
+  }
+    </style>
+    <!-- <img src="images/image1.jpg" alt=""> -->
+    <div class="bg-text">
+      <h1>Covid-19 Diagnosis app</h1>
+      <h3 style="color:cornsilk">Check if you are covid positive with your X-ray</h3>
+    </div>
+    <div class="form">
+    <div class="subtitle">Patient Details</div>
+      <form action = "/result" method = "POST"
+         enctype = "multipart/form-data">
+         <div class="input-container ic2">
+          <label for="pname" class="placeholder1">Patient name:</label>
+          <input type="text" id="pname" name="pname" placeholder=" " class="input"/>
+        </div>
+        <!-- <div class="input-container ic2">
+          <label for="age" class="placeholder1">Patient's age:</label>
+          <div class="cut"></div>
+          <input type="number" id="age" name="age" palceholder=" " class="input"/>
+        </div>
+        <br>
+        <div class="input-container ic3">
+          &nbsp;<label for="gender" class="placeholder1">Gender: </label><br>
+          <div class="cut"></div>
+          &emsp;&ensp;<input type="radio" name="gender" id="male" value="male" ><label for="male" style = "color:white">Male</label>&emsp;&emsp;&emsp;&emsp;&ensp;
+          <input type="radio" name="gender" id="female" value="female" ><label for="female" style = "color:white">Female</label>
+        </div> -->
+        <div class="input-container ic2">
+          <label for="file" class="placeholder1">X-ray report:</label>
+          <div class="cut cut-short"></div>
+          <input type = "file" id="file" name = "file" class="input" />
+        </div>
+        <input type="submit" class="submit" value="Submit"/>
+      </form>
+    </div>
+</body>
+</html>
